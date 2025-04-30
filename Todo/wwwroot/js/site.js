@@ -1,4 +1,33 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿function deleteTodo(i){
+    $.ajax({
+        url: 'Home/Delete',
+        type: 'POST',
+        data: {
+            id: i
+        },
+        success: function(){
+            window.location.reload();
+        }
 
-// Write your JavaScript code.
+    });
+}
+
+function populateForm(i){
+    $.ajax ({
+        url: 'Home/populateForm',
+        type: 'GET',
+        data: {
+            id: i
+        },
+        dataType: 'json',
+        success: function (response){
+            $("#Todo_Name").val(response.name);
+            $("#Todo_Id").val(response.id);
+            $("#Form-button").val("Update Todo");
+            $("form-action").attr("action", "/Home/Update");
+
+        }
+
+    });
+}
+

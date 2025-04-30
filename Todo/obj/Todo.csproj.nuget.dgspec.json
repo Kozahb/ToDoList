@@ -50,6 +50,16 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Data.Sqlite": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "SQLite": {
+              "target": "Package",
+              "version": "[3.12.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
