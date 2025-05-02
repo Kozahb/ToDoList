@@ -7,23 +7,66 @@
                 <tr class="table-primary">
                     <th scope="col">Id</th>
                     <th scope="col">Name</th>
+                    <th scope="col">Status</th>
                     <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 @foreach (var t in Model.TodoList)
                 {
-                    <tr>
+                    <tr class="@(t.IsCompleted ? "completed" : "")">
                         <th class="todos-column" scope="row">@t.Id</th>
                         <td class="todos-column">@t.Name</td>
+                        <td>
+                            <input type="checkbox" class="task-checkbox" @(t.IsCompleted ? "checked" : "") data-id="@t.Id" />
+                        </td>
                         <td class="buttons-column">
                             <input type="submit" class="btn btn-danger" value="Delete" onClick="deleteTodo(@t.Id)" />
                             <input type="submit" class="btn btn-primary" value="Update" onClick="populateForm(@t.Id)" />
                         </td>
-
                     </tr>
                 }
             </tbody>
         </table>
     </div>
 </div>
+
+@section Scripts {
+    <script>
+             document.querySelectorAll('.task-checkbox').forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const taskId = checkbox.getAttribute('data-id');
+                const isCompleted = checkbox.checked;
+
+                                const listItem = checkbox.closest('tr');
+                if (isCompleted) {
+                    listItem.classList.add('completed');
+                } else {
+                    listItem.classList.remove('completed');
+                }
+
+                                updateTaskStatus(taskId, isCompleted);
+            });
+        });
+
+        
+        function updateTaskStatus(taskId, isCompleted) {
+            fetch('/Home/UpdateTaskStatus', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ id: taskId, isCompleted: isCompleted })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.success) {
+                    console.error("Erro ao atualizar status da tarefa.");
+                }
+            })
+            .catch(error => {
+                console.error('Erro ao atualizar status:', error);
+            });
+        }
+    </script>
+}

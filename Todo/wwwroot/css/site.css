@@ -29,3 +29,13 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.task-checkbox {
+  margin-right: 10px;
+}

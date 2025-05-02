@@ -8,4 +8,6 @@ namespace Todo.Models.ViewModels
         public List<TodoItem>? TodoList { get; set; }
         public TodoItem? Todo { get; set; }
     }
+  
+
 }

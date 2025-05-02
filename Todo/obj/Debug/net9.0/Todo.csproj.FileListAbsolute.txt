@@ -17,7 +17,6 @@ C:\temp\To do list app\Todo\obj\Debug\net9.0\Todo.RazorAssemblyInfo.cs
 C:\temp\To do list app\Todo\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 C:\temp\To do list app\Todo\obj\Debug\net9.0\scopedcss\bundle\Todo.styles.css
 C:\temp\To do list app\Todo\obj\Debug\net9.0\scopedcss\projectbundle\Todo.bundle.scp.css
-C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\ep4rr7mo0i-b9sayid5wm.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\fc7h4jd2t2-61n19gt1b8.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\9vreofb19j-bqjiyaj88i.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\fovvfqp3ty-c2jlpeoesf.gz
@@ -43,7 +42,6 @@ C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\xcp6jsmw5k-tdbxkamptv.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\qqsdu7k6zw-j5mq2jizvt.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\wofnl11qxn-06098lyss8.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\xqt857l23n-nvvlpmu67g.gz
-C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\29n0s8ph1f-s35ty4nyc5.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\4c5jfsskdl-pj5nd1wqec.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\shse7vevgq-46ein0sx1k.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\migtwdm63g-v0zj4ognzu.gz
@@ -125,4 +123,6 @@ C:\temp\To do list app\Todo\bin\Debug\net9.0\runtimes\win-arm64\native\e_sqlite3
 C:\temp\To do list app\Todo\bin\Debug\net9.0\runtimes\win-x64\native\e_sqlite3.dll
 C:\temp\To do list app\Todo\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.dll
 C:\temp\To do list app\Todo\obj\Debug\net9.0\Todo.csproj.Up2Date
-C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\nsc2yllrpk-rg0f1v6bx1.gz
+C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\29n0s8ph1f-xlulfai70c.gz
+C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\ep4rr7mo0i-the7ahebg1.gz
+C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\nsc2yllrpk-fwmyjqkxis.gz

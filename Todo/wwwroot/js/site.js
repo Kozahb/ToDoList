@@ -29,5 +29,19 @@ function populateForm(i){
         }
 
     });
+    function submitTodo(){
+        const id = $('#Todo-Id').val();
+        const name = $('#Todo_Name').val();
+
+        const data = {Id: id, Name: name };
+        const url = id? '/Home/Update' : '/Home/Insert';
+
+        $.post(url, data, function() {
+            location.reload();
+        
+        });
+    } 
+    
+    
 }
 
