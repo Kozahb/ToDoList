@@ -28,8 +28,8 @@ namespace Todo.Controllers
 
         
 
-        [HttpGet]
-        public JsonResult UpdateTaskStatus(int id, bool isCompleted)
+[HttpPost]
+public JsonResult UpdateTaskStatus(int id, bool isCompleted)
 {
     using (SqliteConnection con = new SqliteConnection("Data Source=db.sqlite"))
     {
@@ -37,24 +37,23 @@ namespace Todo.Controllers
 
         using (var updateCmd = con.CreateCommand())
         {
-            updateCmd.CommandText = $"UPDATE todo SET IsCompleted = @isCompleted WHERE Id = @id";
+            updateCmd.CommandText = "UPDATE todo SET IsCompleted = @isCompleted WHERE Id = @id";
             updateCmd.Parameters.AddWithValue("@id", id);
             updateCmd.Parameters.AddWithValue("@isCompleted", isCompleted ? 1 : 0); 
 
             try
             {
                 updateCmd.ExecuteNonQuery();
+                return Json(new { success = true });
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+                return Json(new { success = false, message = ex.Message });
             }
         }
     }
-
-    return Json(new { success = true });
 }
-
 
         internal TodoViewModel GetAllTodos()
 {
@@ -123,19 +122,22 @@ namespace Todo.Controllers
             return todo;
         }
 
-       public RedirectResult Insert(TodoItem todo)
+       public RedirectToActionResult Insert(TodoItem todo)
 {
-    using (SqliteConnection con = new SqliteConnection("Data Source=db.sqlite"))
+    if (string.IsNullOrWhiteSpace(todo.Name))
+    {
+        return RedirectToAction("Index");
+    }
+
+    using (var con = new SqliteConnection("Data Source=db.sqlite"))
     {
         con.Open();
 
-        
         using (var checkCmd = con.CreateCommand())
         {
             checkCmd.CommandText = "SELECT COUNT(*) FROM todo;";
             long count = (long)checkCmd.ExecuteScalar();
 
-            
             if (count == 0)
             {
                 using (var resetCmd = con.CreateCommand())
@@ -146,7 +148,6 @@ namespace Todo.Controllers
             }
         }
 
-        
         using (var insertCmd = con.CreateCommand())
         {
             insertCmd.CommandText = "INSERT INTO todo (Name) VALUES (@name);";
@@ -158,12 +159,13 @@ namespace Todo.Controllers
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                Console.WriteLine($"Erro ao inserir tarefa: {ex.Message}");
             }
         }
     }
-            return Redirect("http://localhost:5158/");
-        }
+
+    return RedirectToAction("Index");
+}
 
         [HttpPost]
         public JsonResult Delete(int id)
@@ -182,27 +184,39 @@ namespace Todo.Controllers
             return Json(new {});
         }
 
-        public RedirectResult Update(TodoItem todo)
-        {
-            using (SqliteConnection con =
-                   new SqliteConnection("Data Source=db.sqlite"))
-            {
-                using (var tableCmd = con.CreateCommand())
-                {
-                    con.Open();
-                    tableCmd.CommandText = $"UPDATE todo SET name = '{todo.Name}' WHERE Id = '{todo.Id}'";
-                    try
-                    {
-                        tableCmd.ExecuteNonQuery();
-                    }
-                    catch (Exception ex)
-                    {
-                        Console.WriteLine(ex.Message);
-                    }
-                }
-            }
+[HttpPost]
+public IActionResult Update(TodoItem todo)
+{
+    
+    if (!ModelState.IsValid)
+    {
+        return View(todo);  
+    }
 
-           return Redirect("http://localhost:5158/");
+    using (SqliteConnection con = new SqliteConnection("Data Source=db.sqlite"))
+    {
+        con.Open();
+
+        using (var updateCmd = con.CreateCommand())
+        {
+            updateCmd.CommandText = "UPDATE todo SET Name = @name WHERE Id = @id";
+            updateCmd.Parameters.AddWithValue("@id", todo.Id);
+            updateCmd.Parameters.AddWithValue("@name", todo.Name);
+
+            try
+            {
+                updateCmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return View("Error");  
+            }
         }
     }
-}
+
+         return RedirectToAction("Index");  
+      }
+
+    }
+} 

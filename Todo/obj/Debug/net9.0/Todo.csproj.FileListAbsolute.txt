@@ -125,4 +125,4 @@ C:\temp\To do list app\Todo\bin\Debug\net9.0\runtimes\win-x86\native\e_sqlite3.d
 C:\temp\To do list app\Todo\obj\Debug\net9.0\Todo.csproj.Up2Date
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\29n0s8ph1f-xlulfai70c.gz
 C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\ep4rr7mo0i-the7ahebg1.gz
-C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\nsc2yllrpk-fwmyjqkxis.gz
+C:\temp\To do list app\Todo\obj\Debug\net9.0\compressed\nsc2yllrpk-jy84ie6oau.gz

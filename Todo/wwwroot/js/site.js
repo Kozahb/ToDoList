@@ -8,7 +8,6 @@
         success: function(){
             window.location.reload();
         }
-
     });
 }
 
@@ -23,25 +22,30 @@ function populateForm(i){
         success: function (response){
             $("#Todo_Name").val(response.name);
             $("#Todo_Id").val(response.id);
-            $("#Form-button").val("Update Todo");
-            $("form-action").attr("action", "/Home/Update");
-
+            $("#form-button").val("Update Todo");
+            $("#form-action").attr("action", "/Home/Update");
         }
-
     });
-    function submitTodo(){
-        const id = $('#Todo-Id').val();
-        const name = $('#Todo_Name').val();
-
-        const data = {Id: id, Name: name };
-        const url = id? '/Home/Update' : '/Home/Insert';
-
-        $.post(url, data, function() {
-            location.reload();
-        
-        });
-    } 
-    
-    
 }
 
+function submitTodo() {
+    const id = $('#Todo_Id').val();
+    const name = $('#Todo_Name').val();
+
+    const data = { Id: id, Name: name };
+
+    const url = id ? '/Home/Update' : '/Home/Insert'; 
+
+    $.ajax({
+        url: url,
+        type: 'POST',
+        data: data,
+        success: function() {
+            console.log("Task updated successfully");
+            location.reload(); 
+        },
+        error: function(xhr, status, error) {
+            console.error("Error in submitTodo:", error); 
+        }
+    });
+}

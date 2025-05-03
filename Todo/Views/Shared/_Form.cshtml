@@ -2,13 +2,11 @@
 
 
 <form asp-action="Insert" id="form-action" method="post" role="form">
-     <div asp-validation-summary="All" ></div>
-             <label asp-for="Todo.Name" ></label>
-             <input asp-for="Todo.Id" type="hidden"  />
-             <input asp-for="Todo.Name" />
-             <span asp-validation-for="Todo.Name"></span>
-             <input type="submit" id="form-button" value="add Todo" />
-             <input type="hidden" id="Id" name="Id" />
-             <input type="submit" class="btn btn-success" value="Salvar" onclick="submitTodo()" />
-             
-</form> 
+    <div asp-validation-summary="All"></div>
+    <label asp-for="Todo.Name"></label>
+    <input asp-for="Todo.Id" type="hidden" />
+    <input asp-for="Todo.Name" />
+    <span asp-validation-for="Todo.Name"></span>
+    <input type="submit" id="form-button" value="Add Todo" />
+    <input type="submit" class="btn btn-success" value="Salvar" onclick="submitTodo()" />
+</form>

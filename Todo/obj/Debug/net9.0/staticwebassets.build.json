@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "24LAenimzK9bfxzBrRikwIP9922bPbCJoX56A5qqg2Q=",
+  "Hash": "XIVtzAv/h5R+mkZNbNHQKpdqbGHpuyVMXrelfzo65vY=",
   "Source": "Todo",
   "BasePath": "_content/Todo",
   "Mode": "Default",
@@ -983,12 +983,12 @@
       "OriginalItemSpec": "C:\\temp\\To do list app\\Todo\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Identity": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-fwmyjqkxis.gz",
+      "Identity": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-jy84ie6oau.gz",
       "SourceId": "Todo",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Todo",
-      "RelativePath": "js/site#[.{fingerprint=fwmyjqkxis}]?.js.gz",
+      "RelativePath": "js/site#[.{fingerprint=jy84ie6oau}]?.js.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -997,8 +997,8 @@
       "RelatedAsset": "C:\\temp\\To do list app\\Todo\\wwwroot\\js\\site.js",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "2p6jtzg8hl",
-      "Integrity": "Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI=",
+      "Fingerprint": "4vnd28rajc",
+      "Integrity": "EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\temp\\To do list app\\Todo\\wwwroot\\js\\site.js"
@@ -1459,8 +1459,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "fwmyjqkxis",
-      "Integrity": "b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I=",
+      "Fingerprint": "jy84ie6oau",
+      "Integrity": "pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -3324,13 +3324,13 @@
       ]
     },
     {
-      "Route": "js/site.fwmyjqkxis.js",
-      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-fwmyjqkxis.gz",
+      "Route": "js/site.js",
+      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-jy84ie6oau.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.002493765586"
+          "Quality": "0.001912045889"
         }
       ],
       "ResponseHeaders": [
@@ -3340,19 +3340,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "400"
+          "Value": "522"
         },
         {
           "Name": "ETag",
-          "Value": "\"Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI=\""
+          "Value": "\"EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 02:24:18 GMT"
+          "Value": "Sat, 03 May 2025 04:30:30 GMT"
         },
         {
           "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
+          "Value": "no-cache"
         },
         {
           "Name": "Content-Encoding",
@@ -3368,26 +3368,18 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I=\""
+          "Value": "W/\"pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU=\""
         }
       ],
       "EndpointProperties": [
         {
-          "Name": "fingerprint",
-          "Value": "fwmyjqkxis"
-        },
-        {
-          "Name": "label",
-          "Value": "js/site.js"
-        },
-        {
           "Name": "integrity",
-          "Value": "sha256-b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I="
+          "Value": "sha256-pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU="
         }
       ]
     },
     {
-      "Route": "js/site.fwmyjqkxis.js",
+      "Route": "js/site.js",
       "AssetFile": "C:\\temp\\To do list app\\Todo\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -3397,7 +3389,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "1023"
+          "Value": "1347"
         },
         {
           "Name": "Content-Type",
@@ -3405,11 +3397,156 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I=\""
+          "Value": "\"pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 02:24:18 GMT"
+          "Value": "Sat, 03 May 2025 04:30:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.js.gz",
+      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-jy84ie6oau.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "522"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 04:30:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.jy84ie6oau.js",
+      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-jy84ie6oau.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.001912045889"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "522"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 04:30:30 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "jy84ie6oau"
+        },
+        {
+          "Name": "label",
+          "Value": "js/site.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU="
+        }
+      ]
+    },
+    {
+      "Route": "js/site.jy84ie6oau.js",
+      "AssetFile": "C:\\temp\\To do list app\\Todo\\wwwroot\\js\\site.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1347"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 03 May 2025 04:30:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3419,7 +3556,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fwmyjqkxis"
+          "Value": "jy84ie6oau"
         },
         {
           "Name": "label",
@@ -3427,13 +3564,13 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I="
+          "Value": "sha256-pU9oAfOgDr6L5ZY30dukqh/PpX/FV8tXSj5skXKwpRU="
         }
       ]
     },
     {
-      "Route": "js/site.fwmyjqkxis.js.gz",
-      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-fwmyjqkxis.gz",
+      "Route": "js/site.jy84ie6oau.js.gz",
+      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-jy84ie6oau.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3442,7 +3579,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "400"
+          "Value": "522"
         },
         {
           "Name": "Content-Type",
@@ -3450,11 +3587,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI=\""
+          "Value": "\"EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 02:24:18 GMT"
+          "Value": "Sat, 03 May 2025 04:30:30 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3472,7 +3609,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "fwmyjqkxis"
+          "Value": "jy84ie6oau"
         },
         {
           "Name": "label",
@@ -3480,144 +3617,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-fwmyjqkxis.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.002493765586"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "400"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 02:24:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js",
-      "AssetFile": "C:\\temp\\To do list app\\Todo\\wwwroot\\js\\site.js",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "1023"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 02:24:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-b8MpyhFWwWIgBfmc22nRgGozTUjMGPJo+qj/JfAls6I="
-        }
-      ]
-    },
-    {
-      "Route": "js/site.js.gz",
-      "AssetFile": "C:\\temp\\To do list app\\Todo\\obj\\Debug\\net9.0\\compressed\\nsc2yllrpk-fwmyjqkxis.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "400"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/javascript"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Fri, 02 May 2025 02:24:18 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Wq7OMsm8E+Lehq6iS1oEe3BAazyD2V1XxA3Ox8WxYHI="
+          "Value": "sha256-EEyq1b+Nmjg9OyS4dLF+BStzEYx4QLI9HAq3qhWMDxA="
         }
       ]
     },
