@@ -28,9 +28,9 @@ namespace Todo.Controllers
 
         
 
-[HttpPost]
-public JsonResult UpdateTaskStatus(int id, bool isCompleted)
-{
+    [HttpPost]
+    public JsonResult UpdateTaskStatus(int id, bool isCompleted)
+{ 
     using (SqliteConnection con = new SqliteConnection("Data Source=db.sqlite"))
     {
         con.Open();
@@ -55,7 +55,7 @@ public JsonResult UpdateTaskStatus(int id, bool isCompleted)
     }
 }
 
-        internal TodoViewModel GetAllTodos()
+    internal TodoViewModel GetAllTodos()
 {
     List<TodoItem> todoList = new();
 
@@ -91,7 +91,7 @@ public JsonResult UpdateTaskStatus(int id, bool isCompleted)
     };
 }
 
-        internal TodoItem GetById(int id)
+    internal TodoItem GetById(int id)
         {
             TodoItem todo = new();
 
@@ -122,7 +122,7 @@ public JsonResult UpdateTaskStatus(int id, bool isCompleted)
             return todo;
         }
 
-       public RedirectToActionResult Insert(TodoItem todo)
+    public RedirectToActionResult Insert(TodoItem todo)
 {
     if (string.IsNullOrWhiteSpace(todo.Name))
     {
@@ -150,7 +150,7 @@ public JsonResult UpdateTaskStatus(int id, bool isCompleted)
 
         using (var insertCmd = con.CreateCommand())
         {
-            insertCmd.CommandText = "INSERT INTO todo (Name) VALUES (@name);";
+            insertCmd.CommandText = "INSERT INTO todo (Name, isCompleted) VALUES (@name, 0);";
             insertCmd.Parameters.AddWithValue("@name", todo.Name);
 
             try
@@ -167,56 +167,29 @@ public JsonResult UpdateTaskStatus(int id, bool isCompleted)
     return RedirectToAction("Index");
 }
 
-        [HttpPost]
-        public JsonResult Delete(int id)
-        {
-            using (SqliteConnection con =
-                   new SqliteConnection("Data Source=db.sqlite"))
-            {
-                using (var tableCmd = con.CreateCommand())
-                {
-                    con.Open();
-                    tableCmd.CommandText = $"DELETE from todo WHERE Id = '{id}'";
-                    tableCmd.ExecuteNonQuery();
-                }
-            }
-
-            return Json(new {});
-        }
-
-[HttpPost]
-public IActionResult Update(TodoItem todo)
+    [HttpPost]
+    public JsonResult Delete(int id)
 {
-    
-    if (!ModelState.IsValid)
-    {
-        return View(todo);  
-    }
-
     using (SqliteConnection con = new SqliteConnection("Data Source=db.sqlite"))
     {
         con.Open();
-
-        using (var updateCmd = con.CreateCommand())
+        using (var deleteCmd = con.CreateCommand())
         {
-            updateCmd.CommandText = "UPDATE todo SET Name = @name WHERE Id = @id";
-            updateCmd.Parameters.AddWithValue("@id", todo.Id);
-            updateCmd.Parameters.AddWithValue("@name", todo.Name);
+            deleteCmd.CommandText = "DELETE FROM todo WHERE Id = @id";
+            deleteCmd.Parameters.AddWithValue("@id", id);
 
             try
             {
-                updateCmd.ExecuteNonQuery();
+                deleteCmd.ExecuteNonQuery();
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return View("Error");  
+                Console.WriteLine($"Erro ao deletar tarefa: {ex.Message}");
+                return Json(new { success = false, message = "Erro ao excluir tarefa" });
             }
         }
     }
+    return Json(new { success = true });
+}
 
-         return RedirectToAction("Index");  
-      }
-
-    }
-} 
+    }}

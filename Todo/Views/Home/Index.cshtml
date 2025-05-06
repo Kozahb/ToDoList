@@ -21,9 +21,8 @@
                             <input type="checkbox" class="task-checkbox" @(t.IsCompleted ? "checked" : "") data-id="@t.Id" />
                         </td>
                         <td class="buttons-column">
-                            <input type="submit" class="btn btn-danger" value="Delete" onClick="deleteTodo(@t.Id)" />
-                            <input type="submit" class="btn btn-primary" value="Update" onClick="populateForm(@t.Id)" />
-                        </td>
+                            <input type="submit" class="btn btn-danger" value="Delete" onclick="if (confirm('Tem certeza que deseja deletar?')) deleteTodo(@t.Id); return false;" />
+                            </td>
                     </tr>
                 }
             </tbody>
@@ -38,14 +37,14 @@
                 const taskId = checkbox.getAttribute('data-id');
                 const isCompleted = checkbox.checked;
 
-                                const listItem = checkbox.closest('tr');
+                const listItem = checkbox.closest('tr');
                 if (isCompleted) {
                     listItem.classList.add('completed');
                 } else {
                     listItem.classList.remove('completed');
                 }
 
-                                updateTaskStatus(taskId, isCompleted);
+                updateTaskStatus(taskId, isCompleted);
             });
         });
 
